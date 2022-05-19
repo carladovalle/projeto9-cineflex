@@ -10,7 +10,7 @@ export default function ChooseSection () {
     const [error, setError] = useState(false);
 
     useEffect (() => {
-        const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${filmeId}`)
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${filmeId}/showtimes`)
     
         promise.then(response => {
             setMovie(response.data)
@@ -44,7 +44,7 @@ export default function ChooseSection () {
             <div className="barraInferior">
                 <div className="moldura2">
                     <div className="movie2">
-                        <img src={movie.posterURL} />
+                        <img src={movie.posterURL} class="movie2"/>
                     </div>
                 </div>
                 <h5>{movie.title}</h5>

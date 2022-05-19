@@ -120,7 +120,6 @@ h4 {
     left: 0;
     bottom: 0;
     display: flex;
-    justify-content: start;
     align-items: center;
 }
 
@@ -144,4 +143,5 @@ h4 {
 h5 {
     color: #293845;
     font-size: 26px;
+    margin-right: 118px;
 }

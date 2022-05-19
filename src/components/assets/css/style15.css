@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+.topo {
+    width: 375px;
+    height: 67px;
+    background-color: #C3CFD9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+h1 {
+    color: #E8833A;
+    font-size: 34px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.frase {
+    width: 375px;
+    height: 110px;
+    margin-top: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #293845;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.catalogo {
+    width: 375px;
+    height: 700px;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+.moldura {
+    width: 145px;
+    height: 209px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.movie {
+    width: 129px;
+    height: 193px;
+    margin-bottom: 27px;
+    margin-top: 27px;
+}
+
+.chooseSection {
+    background-color: red;
+}
+
+.corpo {
+    width: 374px;
+    height: 583px;
+    color: aqua;
+    margin-top: 0;
+    margin-left: 24px;
+}
+
+h3 {
+    color: #293845;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.botoes {
+    display: flex;
+    justify-content: start;
+    margin-top: 22px;
+    margin-bottom: 23px;
+}
+
+.hora1 {
+    background-color: #E8833A;
+    width: 83px;
+    height: 43px;
+    border-radius: 3px;
+}
+
+.hora2 {
+    background-color: #E8833A;
+    width: 83px;
+    height: 43px;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+
+h4 {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.barraInferior {
+    background-color: #9EADBA;
+    width: 375px;
+    height: 117px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.moldura2 {
+    width: 64px;
+    height: 89px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.movie2 {
+    width: 48px;
+    height: 72px;
+}
+
+h5 {
+    color: #293845;
+    font-size: 26px;
+}

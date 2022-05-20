@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Init from "./Init";
 import ChooseSection from "./ChooseSection";
+import ChooseSeats from "./ChooseSeats";
 
 export default function App () {
     return (

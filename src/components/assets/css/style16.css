@@ -71,7 +71,7 @@ h2 {
 
 .corpo {
     width: 374px;
-    height: 583px;
+    height: 333px;
     color: aqua;
     margin-top: 0;
     margin-left: 24px;
@@ -133,6 +133,7 @@ h4 {
     align-items: center;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
     margin-left: 10px;
+    background-color: #FFFFFF;
 }
 
 .movie2 {
@@ -144,4 +145,135 @@ h5 {
     color: #293845;
     font-size: 26px;
     margin-right: 118px;
+}
+
+.assentos {
+    width: 375px;
+    height: 300px;
+    display: flex;
+    justify-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.seat {
+    color: #000000;
+    font-size: 11px;
+    background-color: #C3CFD9;
+    border-radius: 12px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #808F9D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.status {
+    width: 375px;
+    height: 117px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h7 {
+    color: #4E5A65;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.selecionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.disponivel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.indisponivel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bolinhaSelecionado {
+    background-color: #8DD7CF;
+    border-radius: 12px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #1AAE9E;
+}
+
+.bolinhaDisponivel {
+    background-color: #C3CFD9;
+    border-radius: 12px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #808F9D;
+}
+
+.bolinhaIndisponivel {
+    background-color: #FBE192;
+    border-radius: 12px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #F7C52B
+}
+
+.cadastrar {
+    width: 375px;
+    height: 330px;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.cpf {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+h8 {
+    color: #293845;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 327px;
+    height: 51px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+::placeholder {
+    color: #AFAFAF;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    background-color: #E8833A;
+    width: 225px;
+    height: 42px;
+    border-radius: 3px;
+    margin-left: 72px;
+}
+
+h9 {
+    color: #FFFFFF;
+    font-size: 18px;
 }

@@ -38,7 +38,7 @@ export default function Init () {
                 <h2>Selecione o filme</h2>
             </div>
             <div className="catalogo">
-                {movies.map(movie => <Movie source={movie.posterURL} id={movie.id} />)}
+                {movies.map((movie,index) => <Movie key={index} source={movie.posterURL} id={movie.id} />)}
             </div>
         </>
 

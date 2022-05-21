@@ -3,13 +3,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
-function Seat ({number}) {
-    return (
-        <div className="seat">
-            <h6>{number}</h6>
-        </div>
-    )
-}
+import Seat from "./Seat"
 
 export default function ChooseSeats () {
 
@@ -20,7 +14,7 @@ export default function ChooseSeats () {
         const promise = axios.get('https://mock-api.driven.com.br/api/v5/cineflex/showtimes/1/seats');
 
         promise.then((response) => {
-            setSeats([response.data])
+            setSeats(response.data)
         })
         
     },[])

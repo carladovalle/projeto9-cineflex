@@ -70,9 +70,8 @@ h2 {
 }
 
 .corpo {
-    width: 374px;
+    width: 375px;
     height: 333px;
-    color: aqua;
     margin-top: 0;
     overflow-y: scroll;
 }
@@ -161,7 +160,7 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 24px;
+    margin-left: 10px;
 }
 
 .status {
@@ -170,6 +169,7 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 h7 {
@@ -235,6 +235,7 @@ h7 {
     display: flex;
     flex-direction: column;
     margin-left: 24px;
+    margin-bottom: 57px;
 }
 
 h8 {
@@ -270,4 +271,14 @@ button {
 h9 {
     color: #FFFFFF;
     font-size: 18px;
+}
+.separar {
+    display: flex;
+    flex-direction: column;
+        margin-left: 5px;
+}
+.separar2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }

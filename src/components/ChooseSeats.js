@@ -1,6 +1,6 @@
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 import React from "react";
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 import Seat from "./Seat"
@@ -8,13 +8,21 @@ import Seat from "./Seat"
 export default function ChooseSeats () {
 
     const [seats,setSeats] = useState([]);
+    const [movieFooter,setMovieFooter] = useState([]);
+    const [movieFooter2,setMovieFooter2] = useState([]);
+    const [movieFooter3,setMovieFooter3] = useState([]);
+    const { idSessao } = useParams();
 
     useEffect (() => {
 
-        const promise = axios.get('https://mock-api.driven.com.br/api/v5/cineflex/showtimes/1/seats');
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`);
 
         promise.then((response) => {
-            setSeats(response.data)
+            setSeats(response.data.seats)
+            setMovieFooter(response.data)
+            setMovieFooter2(response.data.movie)
+            setMovieFooter3(response.data.day)
+
         })
         
     },[])
@@ -28,7 +36,14 @@ export default function ChooseSeats () {
                 <h2>Selecione o(s) assento(s)</h2>
             </div>
             <div className="assentos">
-                {seats.map(seat => <Seat number={seat.id}/>)}
+                {seats.map(assento => 
+                    <Seat
+                        livre={assento.isAvailable}
+                        numero={assento.name}
+                        seats={seats}
+                        key={assento.id}
+                    />
+                )}
             </div>
             <div className="status">
                 <div className="selecionado">
@@ -58,10 +73,15 @@ export default function ChooseSeats () {
             <div className="barraInferior">
                 <div className="moldura2">
                     <div className="movie2">
-                        cxcxcx
+                        <img src={movieFooter2.posterURL} className="movie2"/>
                     </div>
                 </div>
-                <h5>cxcxcx</h5>
+                <div className="separar">
+                    <h5>{movieFooter2.title}</h5>
+                    <div className="separar2">
+                        <h5>{movieFooter3.weekday} - {movieFooter.name}</h5>
+                    </div>
+                </div>
             </div>
         </>
     )

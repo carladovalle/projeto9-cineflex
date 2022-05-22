@@ -9,6 +9,7 @@ export default function App () {
             <Routes>
                 <Route path='/' element={<Init />} />
                 <Route path='/filme/:filmeId' element={<ChooseSection />} />
+                <Route path='/assentos/:idSessao' element={<ChooseSeats />} />
             </Routes>
         </BrowserRouter>
     )

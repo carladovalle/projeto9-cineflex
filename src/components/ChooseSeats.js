@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -12,6 +12,9 @@ export default function ChooseSeats () {
     const [movieFooter2,setMovieFooter2] = useState([]);
     const [movieFooter3,setMovieFooter3] = useState([]);
     const { idSessao } = useParams();
+    const [nome,setNome] = useState("");
+    const [CPF,setCPF] = useState("");
+    let navigate = useNavigate();
 
     useEffect (() => {
 
@@ -26,6 +29,30 @@ export default function ChooseSeats () {
         })
         
     },[])
+
+    function reservarAssentos() {
+        const dadosCliente = {}
+        const numeroAssento = []
+        const idAssento = []
+        seats.filter(assento => assento.isAvailable === 'selecionado')
+                .map(assento => {
+                    idAssento.push(assento.id)
+                    numeroAssento.push(assento.name)
+                })
+        dadosCliente.name = nome
+        dadosCliente.cpf = CPF
+        dadosCliente.ids = idAssento
+        const envioSucesso = {
+            CPF,
+            nome,
+            numeroAssento,
+            titulo: movieFooter2.title,
+            hora: movieFooter.name,
+            data: movieFooter3.date
+        }
+        const envio = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many", dadosCliente)
+        envio.then(navigate("/sucesso", {state: envioSucesso}))
+    }
 
     return (
         <>
@@ -62,13 +89,13 @@ export default function ChooseSeats () {
             <div className="cadastrar">
                 <div className="nome">
                     <h8>Nome do comprador:</h8>
-                    <input placeholder="Digite seu nome..."></input>
+                    <input placeholder="Digite seu nome..." value={nome} onChange={e => setNome(e.target.value)}></input>
                 </div>
                 <div className="cpf">
                     <h8>Cpf do comprador:</h8>
-                    <input placeholder="Digite seu CPF..."></input>
+                    <input placeholder="Digite seu CPF..." value={CPF} onChange={e => setCPF(e.target.value)}></input>
                 </div>
-                <button className="reservar"><h9>Reservar assento(a)</h9></button>
+                <button className="reservar" onClick={reservarAssentos}><h9>Reservar assento(a)</h9></button>
             </div>
             <div className="barraInferior">
                 <div className="moldura2">

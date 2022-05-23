@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Seats ({livre, numero, assentos}) {
+export default function Seats ({livre, numero, seats}) {
 
     const [reserva,setReserva] = useState(livre)
 
@@ -10,18 +10,16 @@ export default function Seats ({livre, numero, assentos}) {
             alert("Este assento não está disponível")
         } else if (reserva === 'selecionado') {
             setReserva(true);
-            assentos[numero-1].isAvailable = true
+            seats[numero-1].isAvailable = true;
         } else {
             setReserva('selecionado')
-            assentos[numero-1].isAvailable = 'selecionado'
+            seats[numero-1].isAvailable = 'selecionado'
         }
     }
 
     return (
-        <div className="seat">
             <div className={`assento ${reserva}`} onClick={() => selecaoAssento(reserva,numero)}>
                 {numero}
             </div>
-        </div>
     )
 }
